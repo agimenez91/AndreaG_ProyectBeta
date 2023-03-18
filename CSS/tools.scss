@@ -1,0 +1,48 @@
+// Responsive mixin
+
+$desktop: 70rem;
+$tablet: 48rem;
+$mobile: 30rem;
+
+@mixin MQ($mediaquery_unit: $mobile) {
+    @media all and (min-width: $mediaquery_unit) {
+        @content;
+    }
+}
+  
+// Flex mixin
+
+@mixin flexible ($dis, $direction, $wrap, $just, $align) {
+    display: $dis;
+    flex-flow: $direction $wrap;
+    justify-content: $just;
+    align-items: $align;
+  }
+  
+// Grid mixin 
+
+@mixin grid ($columns, $gap) {
+display: grid;
+grid-template-columns: repeat ($columns, 1fr);
+gap: $gap;
+
+@include MQ ($mobile) {
+    grid-template-columns: 1fr;
+    gap: 0rem;
+}
+}
+
+// Map layers
+$map-layers: (
+    "below":        -1,
+    "default":      0,
+    "above":        1,
+    "over":         2,
+    "absolute":     3
+);
+
+@function z($layer) {
+    @return map-get($map-layers, $layer);
+}
+
+  

@@ -1,0 +1,174 @@
+// Custom properties: 
+  :root{
+    // Colors
+    --color-black:                #0B091F;
+    --color-white:                #ffffff;
+
+    --color-blue:                 #5544F2;
+    --color-blue-light:           #CDC7FA;
+    --color-blue-dark:            #3D31A4;
+
+    --color-orange:               #F0573D;
+    --color-orange-light:         #F2C1B4;
+    --color-orange-dark:          #973E28;
+
+    --color-green:                #48F194;
+    --color-green-light:          #A7F1C8;
+    --color-green-dark:           #008946;
+    
+    --color-yellow:               #F8CC56;
+    --color-yellow-light:         #FCE9AD;
+    --color-yellow--dark:         #F2AA5A;
+
+    --color-pink:                 #F12DF4;
+    --color-pink-light:           #EDB9EE;
+    --color-pink-dark:            #A513A7;
+
+    // Backgrounds
+
+    --bg-color-black:             var(--color-black);
+    --bg-color-white:             var(--color-white);
+
+    --bg-color-blue:              var(--color-blue);
+    --bg-color-blue-light:        var(--color-blue-light);
+    --bg-color-blue-dark:         var(--color-blue-dark);
+
+    --bg-color-orange:            var(--color-orange);
+    --bg-color-orange-light:      var(--color-orange-light);
+    --bg-color-orange-dark:       var(--color-orange-dark);
+
+    --bg-color-green:             var(--color-green);
+    --bg-color-green-light:       var(--color-green-light);
+    --bg-color-green-dark:        var(--color-green-dark);
+    
+    --bg-color-yellow:            var(--color-yellow);
+    --bg-color-yellow-light:      var(--color-yellow-light);
+    --bg-color-yellow--dark:      var(--color-yellow--dark);
+
+    --bg-color-pink:              var(--color-pink);
+    --bg-color-pink-light:        var(--color-pink-light);
+    --bg-color-pink-dark:         var(--color-pink-dark);
+
+    //Transparencies
+    --bg-color-blue-light-T8:     #cdc7faf1;
+    
+    // Tipografía 
+    --typo-main:                  'Inter', sans-serif;
+    --typo-accent:                "Bely Display", serif;
+
+    // Units Margins
+    --margin-XL:                   16rem;
+    --margin-L:                     8rem;
+    --margin-M:                   3.2rem;
+    --margin-S:                   1.6rem;
+
+    //Units typography
+    --XXL:                        4.8rem;
+    --XL:                           4rem;
+    --L:                          3.2rem;
+    --M:                            2rem;
+    --S:                          1.8rem;
+    --XS:                         1.6rem;
+    --XXS:                        1.4rem;
+  }
+  
+  // Margin and padding reset
+  * , *::before , *::after{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+  }
+  *::before , *::after{
+    display: block;
+  }
+  
+  // Image Reset
+  img , picture , video , iframe , figure{
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;        
+    object-position: center center;
+  }
+  
+  // Links reset
+  a {
+    display: block;
+    text-decoration: none;
+    color:inherit;
+    font-size:inherit;
+  }
+  
+  p a {
+    display: inline;
+  }
+  
+  // List reset
+  li {
+    list-style-type: none;
+  }
+  
+  // Anchor behaviour
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  // Tags reset
+  h1 , h2 , h3 , h4 , h5 , h6 , p ,span , a , strong , blockquote , i , b , u , em {
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    text-decoration: none;
+    color:inherit;
+  }
+
+  // Pseudoelements reset
+  blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+  }
+  
+  // Select configuration
+  ::selection {
+    background-color: var(--bg-color-blue-light);
+    color: var(--color-blue-dark);
+  }
+  
+  // Typography and forms reset
+  form , input, textarea, select , button , label{
+    font-family: inherit;
+    font-size: inherit;
+    hyphens: auto;
+    background-color: transparent;
+    color:inherit;
+    display: block;
+    appearance: none;
+  }
+  
+  // Tables reset
+  table , tr , td {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  // SVG reset
+  svg{
+      width: 100%;
+      display: block;
+      fill: currentColor;
+  }
+  
+  // Typography
+  body {
+    min-height: 100vh;
+    font-size: 62.5%;
+    font-family: var(--typo-main);
+    color: var(--color-black);
+    line-height: 1.4em;
+    hyphens: auto;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
