@@ -1,0 +1,33 @@
+@import 'tools';
+
+// Blog
+
+.card-blog {
+    @include flexible (flex, column, nowrap, flex-start, flex-start);
+    @include padding (var(--XS), var(--XS), var(--XS));
+    border: 2px solid var(--bg-color-blue);
+    transition: 0.3s ease-in-out;
+    max-width: 30em;
+
+    &:hover {
+        border: 2px solid var(--bg-color-orange);
+    }
+}
+
+.thumbnail {
+    aspect-ratio: 16/9;
+    background-color: red;
+}
+
+// Carrousel
+
+.card-carrousel {
+    @include grid(1, inherit);
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+
+    @include MQ ($tablet) {
+        @include grid(3, inherit);
+    }
+}

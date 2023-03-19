@@ -1,0 +1,10 @@
+@import 'tools';
+
+
+.cta {
+    background-image: linear-gradient(0deg, rgba(61, 49, 164, 0.8), rgba(61, 49, 164, 0.8)), url("http://placekitten.com/g/1500/350");
+    background-size: cover;
+    align-items: center;
+}
+
+// en este tipo de utilidades no sé como hacerlas reutilizables, porque no me compila los valores desde un mixin, ni desde el html.

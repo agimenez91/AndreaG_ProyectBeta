@@ -1,10 +1,18 @@
 @import 'tools';
 
 .sect {
-    @include flexible (flex, column, nowrap, flex-start, flex-start);
+    @include flexible (flex, column, nowrap, center, flex-start);
     @include responsivepaddingX();
     @include responsivepaddingY();
     gap: var(--L);
+
+    &__img {
+        max-height: 25rem;
+        z-index: z(below);
+        @include MQ ($tablet) {
+            max-height: inherit;
+        }
+    }
 
     &--Y {
         @include flexible (flex, column, nowrap, center, flex-start);
@@ -17,21 +25,26 @@
     }
 
     &__wrap {
-        @include flexible (flex, column, nowrap, center, flex-start);
+        @include flexible (flex, column, nowrap, space-between, flex-start);
+        width: 100%;
         gap: var(--L);
     }
 
     @include MQ ($tablet) {
-        @include flexible (flex, row, nowrap, center, flex-start);
-        gap: var(--XL);
+        @include flexible (flex, row, nowrap, space-between, flex-start);
+        gap: var(--margin-L);
     }
 
-    @include MQ ($tablet) {
-        gap: var(--margin-L);
+    @include MQ ($desktop) {
+        gap: var(--margin-XL);
     }
 
     &--black {
         background-color: var(--bg-color-black);
         color: var(--color-white);
     }
+}
+
+header.sect {
+    align-items: flex-end;
 }

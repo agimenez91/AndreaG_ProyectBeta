@@ -26,12 +26,16 @@
     }
 
     &__icon {
-        width: var(--L);
-        height: var(--L);
-        padding: 1rem;
+        @include flexible (flex, row, nowrap, center, center);
         background-color: var(--bg-color-white);
         fill: var(--bg-color-blue);
         transition: 0.3s ease-in-out;
+        padding: 1rem;
+
+        & svg {
+            width: var(--L);
+            height: var(--L);            
+        }
 
         &:hover {
             fill: var(--bg-color-orange);

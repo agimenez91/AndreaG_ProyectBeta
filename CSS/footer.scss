@@ -1,0 +1,89 @@
+@import 'tools';
+
+
+.footer {
+    @include flexible (flex, column, nowrap, center, center);
+    @include responsivepaddingY();
+    @include responsivepaddingX();
+    gap: var(--L);
+    text-align: center;
+
+
+    @include MQ ($tablet) {
+        @include grid (4, var(--L));
+        text-align: inherit;
+        align-items: start;
+    }
+    
+    @include MQ ($desktop) {
+        padding-top: 16rem;
+    }
+
+    &__links1 {
+        @include MQ ($tablet) {
+        grid-column: 3;
+        }
+    }
+
+    &__subscription {
+        @include flexible (flex, row, nowrap, center, center);
+
+        &>input[type='email'] {
+            width: 100%;
+        }
+
+        &>input[type='submit'] {
+            width: 100%;
+            font-size: var(--S);
+        }
+
+        @include MQ ($tablet) {
+            grid-column: 3/span 2;
+        }
+    }
+
+    .social-media {
+        grid-row: 2;
+    }
+
+}
+
+.footer__links1, .footer__links2 {
+    @include flexible (flex, column, nowrap, center, center);   
+    gap: var(--S);
+
+    @include MQ ($desktop) {
+        align-items: flex-start;
+    }
+}
+
+.footer__banner {
+    @include flexible (flex, column, nowrap, space-between, center);
+    background-color: var(--bg-color-blue);
+    padding: var(--L);
+    color: var(--color-white);
+    gap: var(--S);
+
+    & ul {
+        @include flexible (flex, column, nowrap, space-between, center);
+        gap: var(--S);
+
+        @include MQ ($tablet) {
+            @include flexible (flex, row, nowrap, space-between, center);
+        }
+    }
+
+    & a {
+        color: var(--color-white);
+        text-align: center;
+        font-size: var(--XS);
+
+        &:hover {
+            color: var(--color-orange);
+        }
+    }
+
+    @include MQ ($tablet) {
+        @include flexible (flex, row, nowrap, space-between, center);   
+    }
+}

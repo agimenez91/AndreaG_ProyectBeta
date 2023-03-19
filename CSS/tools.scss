@@ -22,14 +22,9 @@ $mobile: 30rem;
 // Grid mixin 
 
 @mixin grid ($columns, $gap) {
-display: grid;
-grid-template-columns: repeat ($columns, 1fr);
-gap: $gap;
-
-@include MQ ($mobile) {
-    grid-template-columns: 1fr;
-    gap: 0rem;
-}
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: $gap;
 }
 
 // Margin mixins
@@ -61,6 +56,36 @@ gap: $gap;
     @include MQ ($tablet) {
         padding-top: $padding;
         padding-bottom: $padding;
+    }
+
+    @include MQ ($desktop) {
+        padding-top: ($padding * 2);
+        padding-bottom: ($padding * 2);
+    }    
+}
+
+@mixin responsivemarginX ($margin: 3.2rem) {
+    margin-left: $margin;
+    margin-right: $margin;
+
+    @include MQ ($tablet) {
+        margin-left: ($margin * 2.5);
+        margin-right: ($margin * 2.5);
+    }
+
+    @include MQ ($desktop) {
+        margin-left: ($margin * 5);
+        margin-right: ($margin * 5);
+    }    
+}
+
+@mixin responsivemarginY ($margin: 8rem) {
+    margin-top: $margin;
+    margin-bottom: $margin;
+
+    @include MQ ($tablet) {
+        margin-top: $margin;
+        margin-bottom: $margin;
     }
 
     @include MQ ($desktop) {
