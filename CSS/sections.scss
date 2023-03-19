@@ -1,0 +1,37 @@
+@import 'tools';
+
+.sect {
+    @include flexible (flex, column, nowrap, flex-start, flex-start);
+    @include responsivepaddingX();
+    @include responsivepaddingY();
+    gap: var(--L);
+
+    &--Y {
+        @include flexible (flex, column, nowrap, center, flex-start);
+        gap: var(--L);
+    }
+
+    &--X {
+        @include flexible (flex, column, nowrap, center, flex-start);
+        gap: var(--L);
+    }
+
+    &__wrap {
+        @include flexible (flex, column, nowrap, center, flex-start);
+        gap: var(--L);
+    }
+
+    @include MQ ($tablet) {
+        @include flexible (flex, row, nowrap, center, flex-start);
+        gap: var(--XL);
+    }
+
+    @include MQ ($tablet) {
+        gap: var(--margin-L);
+    }
+
+    &--black {
+        background-color: var(--bg-color-black);
+        color: var(--color-white);
+    }
+}

@@ -1,0 +1,87 @@
+@import 'tools';
+
+// Headings
+h1, .h1 {
+    font-family: "Bely Display";
+    font-size: var(--L);
+    letter-spacing: 0.15rem;
+
+    @include MQ($desktop) {
+        font-size: var(--XL);
+    }
+
+}
+
+h2, .h2 {
+    font-family: "Bely Display";
+    font-size: var(--L);
+
+    @include MQ($desktop) {
+        font-size: var(--XL);
+    }
+}
+
+h3, .h3 {
+    font-family: "Bely Display";
+    font-size: var(--S);
+
+    @include MQ($desktop) {
+        font-size: var(--M);
+    }
+}
+
+h4, .h4, .subtitle--L {
+    font-family: "inter";
+    font-weight: 500;
+    font-size: var(--S);
+    color: var(--color-blue);
+
+    &.dark {
+        color: var(--color-blue-light)
+    }
+
+    @include MQ($desktop) {
+        font-size: var(--M);
+    }
+}
+
+h5, .h5, .subtitle--M {
+    font-family: "inter";
+    font-weight: 500;
+    font-size: var(--S);
+    color: var(--color-blue);
+
+    &.dark {
+        color: var(--color-blue-light)
+    }
+
+    @include MQ($desktop) {
+        font-size: var(--M);
+    }
+}
+
+h6, .h6, .subtitle--S {
+    font-family: "inter";
+    font-weight: 500;
+    font-size: var(--XS);
+    color: var(--color-blue);
+
+    &.dark {
+        color: var(--color-blue-light)
+    }
+
+    @include MQ($desktop) {
+        font-size: var(--S);
+    }
+}
+
+// Text
+
+p, .p {
+    hyphens: auto;
+    font-size: var(--XS);
+
+    @include MQ($desktop) {
+        font-size: var(--S);
+    }
+}

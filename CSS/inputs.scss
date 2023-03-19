@@ -1,0 +1,44 @@
+@import 'tools';
+
+input[type='text'], input[type='tel'], input[type='email'], textarea {
+    @include flexible (flex, column, nowrap, center, center);
+    @include padding (var(--S), var(--L), var(--XS));
+	border: none;
+	outline: inherit;
+    font-size: var(--S);
+    letter-spacing: 0.15rem;
+    background-color: var(--bg-color-blue-light);
+
+    &.dark {
+        background-color: var(--bg-color-white);
+    }
+
+    &:invalid {
+        border: 1px solid var(--color-pink);
+    }
+}
+
+input[type='checkbox'] {
+    width: var(--XS);
+    height: var(--XS);
+    border: 2px solid var(--color-blue);
+    background-color: var(--bg-color-blue-light);
+
+    &:checked {
+        border: 2px solid var(--color-blue-light);
+        background-color: var(--bg-color-blue);
+    }
+}
+
+input[type='radio'] {
+    width: var(--XS);
+    height: var(--XS);
+    border: 2px solid var(--color-blue);
+    border-radius: 50%;
+    background-color: var(--bg-color-blue-light);
+
+    &:checked {
+        border: 2px solid var(--color-blue-light);
+        background-color: var(--bg-color-blue);
+    }
+}
