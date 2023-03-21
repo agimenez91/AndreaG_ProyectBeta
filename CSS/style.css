@@ -474,13 +474,80 @@ a:hover {
   transition: 0.3s ease-in-out;
   max-width: 30em;
 }
+.card-blog__link {
+  text-decoration: none;
+  color: inherit;
+}
+@media all and (min-width: 48rem) {
+  .card-blog--expand {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 7;
+    grid-column: 3/10;
+    min-height: 15rem;
+  }
+  .card-blog--expand .card-blog {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: inherit;
+    border: inherit;
+    gap: var(--margin-M);
+  }
+  .card-blog--expand .card-blog:hover {
+    border: inherit;
+  }
+  .card-blog--expand .card-blog--X {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border: 2px solid var(--bg-color-blue);
+    padding: var(--XS) var(--XS);
+    gap: var(--XS);
+    width: 100%;
+    height: 100%;
+  }
+  .card-blog--expand .card-blog--X:hover {
+    border-color: var(--bg-color-orange);
+  }
+  .card-blog--expand figure {
+    height: 100%;
+  }
+}
 .card-blog:hover {
   border: 2px solid var(--bg-color-orange);
+}
+.card-blog a {
+  text-decoration: none;
+  color: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: var(--XS);
 }
 
 .thumbnail {
   aspect-ratio: 16/9;
-  background-color: red;
+  background-image: url("https://placekeanu.com/400/200");
 }
 
 .card-carrousel {
@@ -492,6 +559,9 @@ a:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   padding: 0;
 }
@@ -1637,74 +1707,16 @@ header.sect {
             align-items: start;
   }
 }
-@media all and (min-width: 70rem) {
-  .blog {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr var(--XS) 1fr var(--XS) 1fr var(--XS) 1fr var(--XS) 1fr var(--XS) 1fr var(--XS) 1fr var(--XS) 1fr var(--XS) 1fr;
-    grid-template-columns: repeat(9, 1fr);
-    gap: var(--XS);
-  }
-}
 .blog .sect__img {
   display: -ms-grid;
   display: grid;
-  -ms-grid-row: 3;
-  grid-row: 3;
+  -ms-grid-row: 5;
+  grid-row: 5;
 }
 @media all and (min-width: 48rem) {
   .blog .sect__img {
-    -ms-grid-row: 2;
-    grid-row: 2;
-  }
-}
-.blog__articles {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: var(--margin-M);
-  width: 100%;
-}
-
-@media all and (min-width: 48rem) {
-  .blog__articles {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
-  }
-}
-
-@media all and (min-width: 48rem) {
-  .blog .card-blog {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    border: inherit;
-    padding: inherit;
-    width: 100%;
-  }
-  .blog .card-blog div {
-    width: 100%;
+    -ms-grid-row: 4;
+    grid-row: 4;
   }
 }
 
@@ -1731,6 +1743,9 @@ header.sect {
         -ms-flex-align: start;
             align-items: start;
     text-align: inherit;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1/span 3;
   }
 }
 
