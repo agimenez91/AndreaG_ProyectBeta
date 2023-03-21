@@ -1,0 +1,28 @@
+@import 'tools';
+
+.about__img {
+    margin-bottom: -8rem;
+
+    @include MQ ($tablet) {
+        margin-bottom: inherit;
+        position: absolute;
+        bottom: 0;
+        right: 8rem;
+        width: 40%;
+
+        &>img {
+            max-height: 600px;
+        }
+    }
+
+    @include MQ ($desktop) {
+        right: 16rem;
+        max-width: 60rem;
+    }
+}
+
+.sect--Y.about {
+    @include MQ ($tablet) {
+        width: 50%;
+    }
+}

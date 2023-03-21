@@ -1,0 +1,31 @@
+@import 'tools';
+
+// Advantages about
+
+.advantages__about {
+    flex-direction: column;
+    gap: var(--L);
+
+    & .sect__wrap {
+        align-items: center;
+
+        @include MQ ($desktop){
+            flex-direction: row;
+            gap: var(--margin-L);
+            align-items: flex-start;
+            flex-wrap: nowrap;
+        }
+
+        & iframe {
+            aspect-ratio: 16/9;
+
+            @include MQ ($desktop){
+                width: 50%;
+            }
+        }
+    }
+}
+
+
+// Advantages service
+

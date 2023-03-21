@@ -9,6 +9,7 @@
     @include responsivepaddingX ();
     padding-top: 2rem;
     padding-bottom: 2rem;
+    mix-blend-mode: plus-lighter;
 
     &__logo {
         z-index: z(absolute);
@@ -37,7 +38,7 @@
 
     &__item>a {
         text-decoration: none;
-        color: var(--color-black);
+        color: var(--color-blue);
         transition: 0.3s ease-in-out;
 
         &:hover {
@@ -54,6 +55,7 @@
         right: inherit;
         width: inherit;
         height: auto;
+        mix-blend-mode: revert;
     }
 }
 

@@ -31,3 +31,24 @@
         @include grid(3, inherit);
     }
 }
+
+
+//Icons
+
+.card-icon {
+    @include flexible(flex, column, nowrap, center, flex-start);
+
+    &:nth-child(even) {
+        align-items: flex-end;
+    }
+
+    @include MQ ($tablet) {
+        @include flexible(flex, row, nowrap, center, center);
+        gap: var(--L);
+    }
+
+    &__content {
+        @include flexible(flex, column, nowrap, center, flex-start);
+        gap: var(--XS);
+    }
+}

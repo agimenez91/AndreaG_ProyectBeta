@@ -9,6 +9,8 @@
     &__img {
         max-height: 25rem;
         z-index: z(below);
+        object-fit: contain;
+
         @include MQ ($tablet) {
             max-height: inherit;
         }
@@ -28,6 +30,14 @@
         @include flexible (flex, column, nowrap, space-between, flex-start);
         width: 100%;
         gap: var(--L);
+
+        &--row {
+            @include MQ ($tablet) {
+                display: flex;
+                flex-direction: row;
+                gap: var(--margin-L);
+            }
+        }
     }
 
     @include MQ ($tablet) {

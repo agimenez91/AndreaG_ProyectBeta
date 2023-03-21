@@ -107,4 +107,16 @@ $map-layers: (
     @return map-get($map-layers, $layer);
 }
 
+//Map margins
+$map-margins: (
+    'XL':                   16rem,
+    'L':                     8rem,
+    'M':                   3.2rem,
+    'S':                   1.6rem,
+);
+
+@function margin($margin) {
+    @return map-get($map-margins, $margin);
+}
+
   

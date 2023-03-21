@@ -1,0 +1,71 @@
+@import 'tools';
+
+.card-price {
+    @include grid (1, var(--L));
+    justify-items: center;
+
+    @include MQ ($tablet) {
+        @include grid (2, var(--margin-L));
+    }
+
+    &__info {
+        @include flexible (flex, column, nowrap, flex-start, flex-start);
+        gap: var(--L);
+    }
+
+    &__price {
+        @include flexible (flex, row, nowrap, flex-start, flex-end);
+        gap: var(--S);
+    }
+
+    &__img {
+        max-width: 30rem;
+
+        @include MQ ($tablet) {
+            max-width: 35rem;
+            display: grid;
+            align-self: end;
+        }
+    }
+
+    &__btn {
+        display: grid;
+        align-items: start;
+    }
+}
+
+.odd {
+    @include MQ ($tablet) {
+        grid-column: 1;
+        grid-row: 1/span 2;
+    }
+}
+
+.even {
+    @include MQ ($tablet) {
+        grid-column: 2;
+        grid-row: 1/span 2;
+    }
+}
+
+.info__table {
+    @include flexible (flex, column, nowrap, center, flex-start);
+    width: 100%;
+    overflow:visible;
+    overflow-y: scroll;
+    max-height: 40rem;
+    border: 1px solid var(--color-blue);
+
+    & tbody {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    & tr {
+        @include flexible (flex, row, nowrap, space-between, center);
+        gap: var(--L);
+        border-bottom: 1px solid var(--color-blue);
+        padding: var(--S) var(--L);
+    }
+}

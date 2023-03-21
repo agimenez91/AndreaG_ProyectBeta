@@ -168,6 +168,7 @@
     font-smooth: always;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
 
-  @import 'tools';
+    max-width: 160rem;
+    margin: auto;
+  }

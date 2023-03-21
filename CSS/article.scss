@@ -1,0 +1,23 @@
+@import 'tools';
+
+.article {
+    &__header {
+        @include flexible (flex, column, nowrap, center, center);
+        gap: var(--L);
+        padding-bottom: 0;
+        padding-top: var(--margin-M);
+        text-align: center;
+        
+        @include MQ ($tablet) {
+            & img {
+                max-height: 50vh;
+            }
+        }
+    }
+
+
+}
+
+header.sect {
+    align-items: center;
+}
