@@ -65,7 +65,6 @@
 img, picture, video, iframe, figure {
   max-width: 100%;
   width: 100%;
-  display: block;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center center;
@@ -472,11 +471,14 @@ a:hover {
   border: 2px solid var(--bg-color-blue);
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
-  max-width: 30em;
+  position: relative;
 }
-.card-blog__link {
+.card-blog__link::after {
+  content: "";
+  inset: 0;
   text-decoration: none;
   color: inherit;
+  position: absolute;
 }
 @media all and (min-width: 48rem) {
   .card-blog--expand {
@@ -1261,31 +1263,15 @@ header.sect {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  width: 100%;
-  overflow: visible;
-  overflow-y: scroll;
-  max-height: 40rem;
-  border: 1px solid var(--color-blue);
-}
-.info__table tbody {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+  max-height: 30rem;
+  border: 1px solid var(--color-blue);
 }
-.info__table tr {
+.info__table li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1299,9 +1285,23 @@ header.sect {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: var(--L);
-  border-bottom: 1px solid var(--color-blue);
+  gap: var(--margin-M);
   padding: var(--S) var(--L);
+  border-bottom: 1px solid var(--color-blue);
+}
+.info__table li:last-child {
+  border-bottom: none;
+}
+
+@media all and (min-width: 48rem) {
+  .sect__wrap.price {
+    gap: var(--margin-L);
+  }
+}
+@media all and (min-width: 70rem) {
+  .sect__wrap.price {
+    gap: var(--margin-XL);
+  }
 }
 
 .advantages__about {

@@ -49,23 +49,35 @@
 }
 
 .info__table {
-    @include flexible (flex, column, nowrap, center, flex-start);
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    overflow:visible;
+    overflow:hidden;
     overflow-y: scroll;
-    max-height: 40rem;
+    max-height: 30rem;
     border: 1px solid var(--color-blue);
 
-    & tbody {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
+    & li {
+        @include flexible (flex, row, nowrap, space-between, center);
+        gap: var(--margin-M);
+        padding: var(--S) var(--L);
+        border-bottom: 1px solid var(--color-blue);
+
+        &:last-child {
+            border-bottom: none;
+        }
     }
 
-    & tr {
-        @include flexible (flex, row, nowrap, space-between, center);
-        gap: var(--L);
-        border-bottom: 1px solid var(--color-blue);
-        padding: var(--S) var(--L);
+
+}
+
+
+.sect__wrap.price {
+    @include MQ ($tablet) {
+        gap: var(--margin-L);
+    }
+
+    @include MQ ($desktop) {
+        gap: var(--margin-XL);
     }
 }
