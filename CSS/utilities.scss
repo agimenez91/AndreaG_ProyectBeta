@@ -1,43 +1,46 @@
 @import 'tools';
 
-.block-align--center {
+.frame {
+    @include responsivepaddingX;
+    @include responsivepaddingY;
+}
+
+.xtra-mrgn--bttm {
+    margin-bottom: 1em;
+}
+
+.dark {
+    @include colorinvert;
+}
+
+.section__wrap {
+    @include flexshort (column, center, center, var(--margin-L));
+}
+
+.margin-auto {
     margin: auto;
 }
 
-.padding-left--XL {
-    padding-left: var(--margin-M);
-
-    @include MQ ($tablet) {
-        padding-left: var(--margin-L);
-    }
-
-    @include MQ ($desktop) {
-        padding-left: var(--margin-XL);
-    }
+.nopaddingtop {
+    padding-top: 0;
 }
 
-.padding-right--XL {
-    padding-right: var(--margin-M);
-
-    @include MQ ($tablet) {
-        padding-right: var(--margin-L);
-    }
-
-    @include MQ ($desktop) {
-        padding-right: var(--margin-XL);
-    }
-}
-
-.txt-align--right {
-    text-align: right;
-}
-
-.flex-align--end {
-    align-items: flex-end;
+.nopaddingbottom {
+    padding-bottom: 0;
 }
 
 .relative {
     position: relative;
 }
 
+.nomarginbottom {
+    margin-bottom: 0;
+}
 
+.txt--blue {
+    color: var(--color-blue);
+}
+
+.txt--orange {
+    color: var(--color-orange);
+}

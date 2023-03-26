@@ -1,15 +1,19 @@
 @import 'tools';
 
 .topbar {
-    @include flexible (flex, row, nowrap, space-between, center);
+    @include flexshort ( row, space-between, center, inherit);
     position: relative;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+
     @include responsivepaddingX ();
     padding-top: 2rem;
     padding-bottom: 2rem;
     mix-blend-mode: plus-lighter;
+    @media not all and (min-resolution:.001dpcm) {
+        mix-blend-mode: inherit;
+    }
 
     &__logo {
         z-index: z(absolute);
@@ -19,15 +23,14 @@
             fill: var(--bg-color-blue);
             
             @include MQ ($tablet) {
-            width: 15rem;
+                width: 15rem;
             }
         }
     }
 }
 
 .nav {
-    @include flexible (flex, column, nowrap, center, center);
-    gap: var(--L);
+    @include flexshort (column, center, center, var(--margin-M));
     background-color: var(--bg-color-blue-light-T8);
     position: absolute;
     width: 100%;
@@ -47,8 +50,7 @@
     }
 
     @include MQ ($desktop) {
-        @include flexible (flex, row, nowrap, space-between, center);
-        gap: var(--M);
+        @include flexshort (row, space-between, center, var(--margin-S));
         background-color: inherit;
         position: inherit;
         top: inherit;
@@ -60,8 +62,7 @@
 }
 
 .burger {
-    @include flexible (flex, column, nowrap, center, center);
-    gap: 0.8rem;
+    @include flexshort (column, center, center, 0.8rem);
     z-index: z(absolute);
 
     @include MQ ($desktop) {
@@ -69,10 +70,12 @@
     }
 
     &__bar {
-        width: var(--L);
+        width: var(--margin-M);
         height: 3px;
         background-color: var(--bg-color-blue);
     }
 
     
 }
+
+

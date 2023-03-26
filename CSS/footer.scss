@@ -2,21 +2,21 @@
 
 
 .footer {
-    @include flexible (flex, column, nowrap, center, center);
+    @include flexshort (column, center, center, var(--margin-M));
     @include responsivepaddingY();
     @include responsivepaddingX();
-    gap: var(--L);
+    @include colorinvert;
     text-align: center;
 
 
     @include MQ ($tablet) {
-        @include grid (4, var(--L));
+        @include grid (4, var(--margin-M));
         text-align: inherit;
         align-items: start;
     }
     
     @include MQ ($desktop) {
-        padding-top: 16rem;
+        padding-top: var(--margin-XL);
     }
 
     &__links1 {
@@ -26,7 +26,7 @@
     }
 
     &__subscription {
-        @include flexible (flex, row, nowrap, center, center);
+        @include flexshort (row, center, center, 0);
 
         &>input[type='email'] {
             width: 100%;
@@ -34,7 +34,7 @@
 
         &>input[type='submit'] {
             width: 100%;
-            font-size: var(--S);
+            font-size: var(--typo-S);
         }
 
         @include MQ ($tablet) {
@@ -49,8 +49,7 @@
 }
 
 .footer__links1, .footer__links2 {
-    @include flexible (flex, column, nowrap, center, center);   
-    gap: var(--S);
+    @include flexshort (column, center, center, var(--margin-S));   
 
     @include MQ ($desktop) {
         align-items: flex-start;
@@ -58,32 +57,36 @@
 }
 
 .footer__banner {
-    @include flexible (flex, column, nowrap, space-between, center);
+    @include flexshort (column, space-between, center, var(--margin-S));
     background-color: var(--bg-color-blue);
-    padding: var(--L);
+    padding: var(--margin-S);
+    @include responsivepaddingX;
     color: var(--color-white);
-    gap: var(--S);
+    font-size: var(--typo-XXS);
 
     & ul {
-        @include flexible (flex, column, nowrap, space-between, center);
-        gap: var(--S);
+        @include flexshort (column, space-between, center, var(--margin-S));
 
         @include MQ ($tablet) {
-            @include flexible (flex, row, nowrap, space-between, center);
+            @include flexshort (row, space-between, center, var(--margin-S));
         }
     }
 
     & a {
         color: var(--color-white);
         text-align: center;
-        font-size: var(--XS);
+        font-size: var(--typo-XXS);
 
         &:hover {
             color: var(--color-orange);
         }
     }
 
+    & p {
+        font-size: var(--typo-XXS);
+    }
+
     @include MQ ($tablet) {
-        @include flexible (flex, row, nowrap, space-between, center);   
+        @include flexshort (row, space-between, center, 0);   
     }
 }

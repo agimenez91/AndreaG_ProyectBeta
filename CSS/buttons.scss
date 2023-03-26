@@ -2,21 +2,25 @@
 
 // Buttons start
 button, .btn--1, input[type='submit'] {
-    @include flexible (flex, column, no-wrap, center, center);
-    @include padding (var(--S), var(--L), var(--XS));
+    @include flexible (flex, row, nowrap, center, center, var(--margin-S));
+    @include padding (var(--typo-S), var(--margin-M));
 	border: none;
 	cursor: pointer;
 	outline: inherit;
     font-family: var(--typo-accent);
     white-space: nowrap;
-    font-size: var(--S);
+    font-size: var(--typo-XS);
     letter-spacing: 0.15rem;
     color: var(--color-white);
     background-color: var(--bg-color-blue);
     transition: 0.5s ease-in-out;
 
+    @include MQ ($tablet) {
+        font-size: var(--typo-S);
+    }
+
     &.btn--arrow {
-        padding: var(--S);
+        padding: var(--typo-S);
     }
 
     &:hover {
@@ -83,7 +87,12 @@ button, .btn--1, input[type='submit'] {
 a {
     color: var(--bg-color-blue);
     text-decoration: underline;
-    font-size: var(--S);
+    font-size: var(--typo-XS);
+    transition: 0.3s ease-in-out;
+
+    @include MQ ($tablet) {
+        font-size: var(--typo-S);
+    }
 
     &:checked {
         color: var(--color-yellow);
@@ -91,6 +100,7 @@ a {
 
     &.dark {
         color: var(--color-white);
+
         &:hover {
             color: var(--color-orange-light);
         }
@@ -99,6 +109,40 @@ a {
     &:hover {
         color: var(--color-orange);
     }
+
+    &svg:hover {
+        color: var(--color-orange);
+    }
+
 }
 
 // Link ends
+
+//Previous-next buttons
+
+.previousnext {
+    @include flexshort (row, center, center, var(--margin-S));
+    width: 100%;
+    color: var(--color-blue);
+    margin-top: var(--margin-M);
+
+    & a {
+        background-color: inherit;
+        padding: 0;
+        display: flex;
+        gap: var(--L);
+        align-items: center;
+    }
+
+    & svg {
+        transition: 0.3s ease-in-out;
+
+        // &:hover {
+        //     fill: var(--bg-color-orange);
+        // }
+    }
+
+    @include MQ ($tablet) {
+        // grid-column: 3/10;
+    }
+}
