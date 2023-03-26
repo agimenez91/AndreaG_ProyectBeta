@@ -36,6 +36,7 @@
   --bg-color-pink-light: var(--color-pink-light);
   --bg-color-pink-dark: var(--color-pink-dark);
   --bg-color-blue-light-T8: #cdc7faf1;
+  --bg-color-white-T8: #fffffff4;
   --typo-main: "Inter", sans-serif;
   --typo-accent: "Bely Display", "lemonde-journal", serif;
   --margin-XXL: 16rem;
@@ -570,7 +571,7 @@ input[type=radio]:checked {
       -ms-flex-align: center;
           align-items: center;
   gap: var(--margin-M);
-  background-color: var(--bg-color-blue-light-T8);
+  background-color: var(--bg-color-white-T8);
   position: absolute;
   width: 100%;
   height: 100vh;
@@ -639,6 +640,30 @@ input[type=radio]:checked {
   width: var(--margin-M);
   height: 3px;
   background-color: var(--bg-color-blue);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.burger.active .burger__bar:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active .burger__bar:nth-child(1) {
+  -webkit-transform: translateY(12px) rotate(45deg);
+          transform: translateY(12px) rotate(45deg);
+}
+
+.burger.active .burger__bar:nth-child(3) {
+  -webkit-transform: translateY(-9.5px) rotate(-45deg);
+          transform: translateY(-9.5px) rotate(-45deg);
+}
+
+.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  mix-blend-mode: normal;
+  color: var(--color-black);
 }
 
 .cover {
@@ -1241,6 +1266,40 @@ iframe {
 @media all and (min-width: 70rem) {
   .sect__wrap.price {
     gap: var(--margin-XL);
+  }
+}
+
+.form {
+  padding-top: var(--margin-L);
+}
+.form__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: -8rem;
+  margin-top: 8rem;
+}
+.form__img img {
+  max-width: 30rem;
+}
+@media all and (min-width: 48rem) {
+  .form__img {
+    margin-bottom: -4rem;
+  }
+}
+@media all and (min-width: 48rem) {
+  .form {
+    background-color: var(--bg-color-black);
+  }
+  .form__area {
+    background-color: var(--bg-color-white);
+    padding: var(--margin-L);
+  }
+  .form.frame {
+    padding-top: 0;
   }
 }
 

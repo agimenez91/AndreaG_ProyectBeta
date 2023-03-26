@@ -1,0 +1,34 @@
+@import 'tools';
+
+.form {
+    padding-top: var(--margin-L);
+
+    &__img {
+
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: -8rem;
+        margin-top: 8rem;
+
+        & img {
+            max-width: 30rem;
+        }
+
+        @include MQ ($tablet) {
+            margin-bottom: -4rem;
+        }        
+    }
+
+    @include MQ ($tablet){
+        background-color: var(--bg-color-black);
+        
+        &__area {
+            background-color: var(--bg-color-white);
+            padding: var(--margin-L);
+        }
+
+        &.frame {
+            padding-top: 0;
+        }
+    }
+}
