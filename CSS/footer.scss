@@ -64,14 +64,6 @@
     color: var(--color-white);
     font-size: var(--typo-XXS);
 
-    & ul {
-        @include flexshort (column, space-between, center, var(--margin-S));
-
-        @include MQ ($tablet) {
-            @include flexshort (row, space-between, center, var(--margin-S));
-        }
-    }
-
     & a {
         color: var(--color-white);
         text-align: center;
@@ -88,5 +80,14 @@
 
     @include MQ ($tablet) {
         @include flexshort (row, space-between, center, 0);   
+    }
+}
+
+
+.menu-legal {
+    @include flexshort (column, space-between, center, var(--margin-S));
+
+    @include MQ ($tablet) {
+        @include flexshort (row, space-between, center, var(--margin-S));
     }
 }

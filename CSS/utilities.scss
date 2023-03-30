@@ -44,3 +44,16 @@
 .txt--orange {
     color: var(--color-orange);
 }
+
+.simple li {
+    list-style-type: circle;
+    font-size: var(--typo-M);
+    margin-left: var(--margin-M);
+    padding-left: var(--margin-XS);
+    max-width: 67rem;
+    margin-bottom: 1.5rem;
+}
+
+.simple p {
+    margin-bottom: 1.5rem;
+}

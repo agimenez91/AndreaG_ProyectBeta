@@ -29,7 +29,7 @@
     }
 }
 
-.nav {
+.menu {
     @include flexshort (column, center, center, var(--margin-M));
     background-color: var(--bg-color-white-T8);
     position: absolute;
@@ -39,7 +39,7 @@
     right: 0;
     display: none;
 
-    &__item>a {
+    & a {
         text-decoration: none;
         color: var(--color-blue);
         transition: 0.3s ease-in-out;

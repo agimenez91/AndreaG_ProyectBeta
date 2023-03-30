@@ -37,6 +37,7 @@
 
     @include MQ ($tablet) {
         flex-direction: row;
+        justify-content: space-between;
 
         & p {
             max-width: 60%;
@@ -77,6 +78,8 @@
 
 .cover--article {
     @include flexshort (column, center, center, var(--margin-S));
+    @include responsivepaddingX();
+    padding-top: var(--margin-M);
     margin-bottom: var(--margin-M);
 
     &__img {

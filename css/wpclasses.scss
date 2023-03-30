@@ -1,0 +1,14 @@
+@import 'tools';
+
+
+.dark.wp-block-latest-posts a {
+    color: var(--color-white);
+
+    &:hover {
+        color: var(--color-orange-light);
+    }
+}
+
+li.dark a:hover {
+    color: var(--color-orange-light);
+}

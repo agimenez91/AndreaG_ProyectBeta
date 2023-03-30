@@ -265,6 +265,8 @@ button, .btn--1, input[type=submit] {
   background-color: var(--bg-color-blue);
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
+  position: relative;
+  text-decoration: none;
 }
 @media all and (min-width: 48rem) {
   button, .btn--1, input[type=submit] {
@@ -321,6 +323,10 @@ button.dark, .btn--1.dark, input[type=submit].dark {
 .btn--5:hover {
   color: var(--color-black);
   background-color: var(--bg-color-pink-light);
+}
+
+li.dark a {
+  color: var(--color-white);
 }
 
 a {
@@ -380,10 +386,14 @@ asvg:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-decoration: none;
 }
 .previousnext svg {
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
+}
+.previousnext .dark {
+  color: var(--color-white);
 }
 input[type=text], input[type=tel], input[type=email], textarea {
   display: -webkit-box;
@@ -556,7 +566,7 @@ input[type=radio]:checked {
   }
 }
 
-.nav {
+.menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -579,17 +589,17 @@ input[type=radio]:checked {
   right: 0;
   display: none;
 }
-.nav__item > a {
+.menu a {
   text-decoration: none;
   color: var(--color-blue);
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
-.nav__item > a:hover {
+.menu a:hover {
   color: var(--color-orange);
 }
 @media all and (min-width: 70rem) {
-  .nav {
+  .menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -750,6 +760,9 @@ input[type=radio]:checked {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .cover-small p {
     max-width: 60%;
@@ -796,7 +809,22 @@ input[type=radio]:checked {
       -ms-flex-align: center;
           align-items: center;
   gap: var(--margin-S);
+  padding-left: 3.2rem;
+  padding-right: 3.2rem;
+  padding-top: var(--margin-M);
   margin-bottom: var(--margin-M);
+}
+@media all and (min-width: 48rem) {
+  .cover--article {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+@media all and (min-width: 70rem) {
+  .cover--article {
+    padding-left: 16rem;
+    padding-right: 16rem;
+  }
 }
 .cover--article__img {
   width: 100%;
@@ -1883,40 +1911,6 @@ iframe {
     padding-right: 16rem;
   }
 }
-.footer__banner ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: var(--margin-S);
-}
-@media all and (min-width: 48rem) {
-  .footer__banner ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    gap: var(--margin-S);
-  }
-}
 .footer__banner a {
   color: var(--color-white);
   text-align: center;
@@ -1944,6 +1938,41 @@ iframe {
         -ms-flex-align: center;
             align-items: center;
     gap: 0;
+  }
+}
+
+.menu-legal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: var(--margin-S);
+}
+@media all and (min-width: 48rem) {
+  .menu-legal {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: var(--margin-S);
   }
 }
 
@@ -2030,4 +2059,28 @@ iframe {
 
 .txt--orange {
   color: var(--color-orange);
+}
+
+.simple li {
+  list-style-type: circle;
+  font-size: var(--typo-M);
+  margin-left: var(--margin-M);
+  padding-left: var(--margin-XS);
+  max-width: 67rem;
+  margin-bottom: 1.5rem;
+}
+
+.simple p {
+  margin-bottom: 1.5rem;
+}
+
+.dark.wp-block-latest-posts a {
+  color: var(--color-white);
+}
+.dark.wp-block-latest-posts a:hover {
+  color: var(--color-orange-light);
+}
+
+li.dark a:hover {
+  color: var(--color-orange-light);
 }
