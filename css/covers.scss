@@ -64,7 +64,7 @@
 
 .about .cover__img {
 
-    margin-bottom: -11rem;
+    margin-bottom: -8.3rem;
 
     @include MQ ($tablet) {
         margin-bottom: -3px;
@@ -81,6 +81,7 @@
     @include responsivepaddingX();
     padding-top: var(--margin-M);
     margin-bottom: var(--margin-M);
+    text-align: center;
 
     &__img {
         width: 100%;

@@ -1,6 +1,6 @@
 @import 'tools';
 
-input[type='text'], input[type='tel'], input[type='email'], textarea {
+input[type='text'], input[type='tel'], input[type='email'], textarea, .input, select {
     @include flexshort (column, center, center, 0);
     @include padding (var(--typo-S), var(--margin-M));
 	border: none;
@@ -8,9 +8,11 @@ input[type='text'], input[type='tel'], input[type='email'], textarea {
     font-size: var(--typo-XS);
     letter-spacing: 0.15rem;
     background-color: var(--bg-color-blue-light);
+    width: 100%;
 
     &.dark {
         background-color: var(--bg-color-white);
+        color: var(--color-black);
     }
 
     &:invalid {

@@ -45,6 +45,18 @@
     color: var(--color-orange);
 }
 
+.txt--blue-light {
+    color: var(--color-blue-light);
+}
+
+.txt--orange-light {
+    color: var(--color-orange-light);
+}
+
+.txt--orange {
+    color: var(--color-orange);
+}
+
 .simple li {
     list-style-type: circle;
     font-size: var(--typo-M);
@@ -57,3 +69,4 @@
 .simple p {
     margin-bottom: 1.5rem;
 }
+

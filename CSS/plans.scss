@@ -27,7 +27,7 @@
     }
 
     &__price {
-        @include flexshort (row, flex-start, flex-end, var(--margin-S));
+        @include flexshort (row, flex-start, baseline, var(--margin-S));
     }
 
     &__img {
@@ -96,3 +96,4 @@
         gap: var(--margin-XL);
     }
 }
+

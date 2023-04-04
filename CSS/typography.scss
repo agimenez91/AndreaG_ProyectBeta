@@ -29,8 +29,10 @@ h2, .h2 {
 }
 
 h3, .h3 {
-    font-family: var(--typo-accent);
+    font-family: var(--typo-main);
     font-size: var(--typo-S);
+    font-weight: 500;
+    color: var(--color-blue-dark);
     margin-bottom: 0.3em;
 
     @include MQ($desktop) {
@@ -40,6 +42,7 @@ h3, .h3 {
 
 h4, .h4, .subtitle--L {
     font-weight: 500;
+    font-family: var(--typo-main);
     font-size: var(--typo-S);
     color: var(--color-blue);
     margin-bottom: 0.3em;
@@ -55,6 +58,7 @@ h4, .h4, .subtitle--L {
 
 h5, .h5, .subtitle--M {
     font-weight: 500;
+    font-family: var(--typo-main);
     font-size: var(--typo-S);
     color: var(--color-blue);
     margin-bottom: 0.3em;
@@ -70,6 +74,7 @@ h5, .h5, .subtitle--M {
 
 h6, .h6, .subtitle--S {
     font-weight: 500;
+    font-family: var(--typo-main);
     font-size: var(--typo-XS);
     color: var(--color-blue);
     margin-bottom: 0.3em;
@@ -88,10 +93,25 @@ h6, .h6, .subtitle--S {
 p, .p {
     hyphens: auto;
     font-size: var(--typo-XS);
-    margin-bottom: 0.3em;
+    margin-bottom: 1rem;
 
     @include MQ($desktop) {
         font-size: var(--typo-M);
-        max-width: 70rem;
     }
+}
+
+.content {
+    & li {
+        list-style-type: circle;
+        margin-left: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    & ul {
+        margin-bottom: 1.5rem;
+    }
+
+    & p {
+        margin-bottom: 1.5rem;
+    } 
 }

@@ -30,7 +30,7 @@
 
         &__info {
             grid-column: 4/11;
-            grid-row: 2;
+            grid-row: 2 /span 2;
         }
 
         &__links {
@@ -156,35 +156,39 @@ iframe {
     }
 }
 
-//Shame about section
+//About section
 .col2-img {
     @include grid (1, 0);
     justify-items: center;
     align-items: center;
 
     &__img {
-        max-width: 25rem;
-        margin-top: 2rem;
+        max-width: 30rem;
+        align-self: center;
+        justify-self: center;
+    }
+
+    &__2 {
+        @include flexshort (column, center, center, 0);
     }
 
     @include MQ ($tablet) {
         @include grid (2, var(--margin-M));
+        align-items: baseline;
 
         &__img {
-            grid-column: 2;
-            grid-row: 1;
+            max-width: 35rem;
         }
 
         &__1 {
-            grid-row: 1/ span 2;
-        }
-
-        &__img {
-            margin-top: 0;
+            grid-row: 1;
         }
     }
 
     @include MQ ($desktop) {
         @include grid (2, var(--margin-XL));
+        &__img {
+            max-width: 40rem;
+        }
     }
 }

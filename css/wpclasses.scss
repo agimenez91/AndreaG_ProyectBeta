@@ -12,3 +12,35 @@
 li.dark a:hover {
     color: var(--color-orange-light);
 }
+
+
+li.wp-social-link.wp-block-social-link {
+    background-color: var(--bg-color-white);
+    padding: 1rem;
+}
+
+ul.wp-block-social-links {
+    display: flex;
+    gap: var(--margin-S);
+}
+
+span.wp-block-social-link-label {
+    font-size: 0.1px;
+}
+
+.footer__links1 .wp-block-group__inner-container ul li, .footer__links1 .wp-block-group__inner-container ul, .footer_links2 .wp-block-group__inner-container p, .footer_links2 ul.wp-block-latest-posts__list.dark.ul.wp-block-latest-posts li {
+    margin-bottom: 1rem;
+}
+
+
+a.wp-block-social-link-anchor {
+    display: flex;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.plans li {
+    margin: 0;
+}
