@@ -11,7 +11,7 @@
         justify-self: center;
     }
 
-    @include MQ ($tablet) {
+    @include MQ ($desktop) {
         @include grid (9, var(--margin-M));
 
         &__img {
@@ -26,6 +26,7 @@
             grid-column: 3/10;
         }
     }
+    
 }
 
 //Sidebar
@@ -35,7 +36,7 @@
     text-align: center;
     padding-top: var(--margin-M);
 
-    @include MQ ($tablet) {
+    @include MQ ($desktop) {
         grid-column: 1 / 2;
         grid-row: 1 / span 2;
         justify-items: start;

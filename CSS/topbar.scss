@@ -10,6 +10,7 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
     mix-blend-mode: plus-lighter;
+    z-index: z(absolute);
     
     @media not all and (min-resolution:.001dpcm) {
         mix-blend-mode: inherit;
@@ -74,6 +75,7 @@
         height: 3px;
         background-color: var(--bg-color-blue);
         transition: 0.3s ease-in-out;
+        z-index: z(absolute);
     }  
 }
 
@@ -93,6 +95,9 @@
     display: flex;
     mix-blend-mode: normal;
     color: var(--color-black);
+    z-index: z(over);
 }
 
-
+.burger.active {
+    z-index: z(absolute);
+}

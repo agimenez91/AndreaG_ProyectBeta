@@ -4,7 +4,11 @@
     @include grid (1, var(--margin-S));
 
     @include MQ ($tablet) {
-        @include grid (3, var(--margin-XL));
+        @include grid (3, var(--margin-S));
+    }
+
+    @include MQ ($desktop) {
+       gap: var(--margin-L);
     }
 }
 

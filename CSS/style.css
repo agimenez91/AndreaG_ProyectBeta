@@ -557,6 +557,7 @@ ul {
   padding-top: 2rem;
   padding-bottom: 2rem;
   mix-blend-mode: plus-lighter;
+  z-index: 3;
 }
 @media all and (min-width: 48rem) {
   .topbar {
@@ -674,6 +675,7 @@ ul {
   background-color: var(--bg-color-blue);
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
+  z-index: 3;
 }
 
 .burger.active .burger__bar:nth-child(2) {
@@ -696,6 +698,11 @@ ul {
   display: flex;
   mix-blend-mode: normal;
   color: var(--color-black);
+  z-index: 2;
+}
+
+.burger.active {
+  z-index: 3;
 }
 
 .cover {
@@ -1388,7 +1395,7 @@ iframe {
   -ms-grid-column-align: center;
       justify-self: center;
 }
-@media all and (min-width: 48rem) {
+@media all and (min-width: 70rem) {
   .blog {
     display: -ms-grid;
     display: grid;
@@ -1422,7 +1429,7 @@ iframe {
   text-align: center;
   padding-top: var(--margin-M);
 }
-@media all and (min-width: 48rem) {
+@media all and (min-width: 70rem) {
   .sidebar {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
@@ -1556,8 +1563,8 @@ iframe {
           align-items: center;
   gap: var(--margin-M);
   color: var(--color-white);
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(61, 49, 164, 0.8)), to(rgba(61, 49, 164, 0.8))), url("http://placekitten.com/g/1500/350");
-  background-image: linear-gradient(0deg, rgba(61, 49, 164, 0.8), rgba(61, 49, 164, 0.8)), url("http://placekitten.com/g/1500/350");
+  background: linear-gradient(200deg, hsl(247deg, 83%, 76%) 0%, hsl(246deg, 87%, 61%) 29%, hsl(246deg, 54%, 42%) 100%);
+  background-position: center;
   background-size: cover;
   text-align: center;
 }
@@ -1628,6 +1635,7 @@ iframe {
       -ms-flex-align: center;
           align-items: center;
   gap: var(--margin-M);
+  text-align: left;
 }
 @media all and (min-width: 48rem) {
   .card-author {
@@ -1754,9 +1762,14 @@ iframe {
   .carrousel {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr var(--margin-XL) 1fr var(--margin-XL) 1fr;
+    -ms-grid-columns: 1fr var(--margin-S) 1fr var(--margin-S) 1fr;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--margin-XL);
+    gap: var(--margin-S);
+  }
+}
+@media all and (min-width: 70rem) {
+  .carrousel {
+    gap: var(--margin-L);
   }
 }
 
